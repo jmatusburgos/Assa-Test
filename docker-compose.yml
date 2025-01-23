@@ -13,10 +13,12 @@ services:
         - "5432:5432" 
       
   test_car.api:
-    image: ${DOCKER_REGISTRY-}testcarapi
+    image: testcarapi
     build:
       context: .
       dockerfile: Test_Car/Dockerfile
+    environment:
+         ASPNETCORE_ENVIRONMENT: Development
     ports:
         - "8080:8080" 
         - "8081:8081"
