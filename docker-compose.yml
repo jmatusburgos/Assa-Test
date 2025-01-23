@@ -1,0 +1,24 @@
+services:
+  products.database:
+     image: postgres:latest 
+     container_name: products.database
+     environment:
+        - POSTGRES_DB=CarDb
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+     volumes:
+        - ./.containers/products-db:/var/lib/postgresql/data 
+     ports:
+        - 5423:5432 
+      
+  test_car.api:
+    image: ${DOCKER_REGISTRY-}testcarapi
+    build:
+      context: .
+      dockerfile: Test_Car/Dockerfile
+    ports:
+        - "8080:8080" 
+        - "8081:8081"
+    depends_on:
+       - products.database
+
