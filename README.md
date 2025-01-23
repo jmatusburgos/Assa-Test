@@ -12,7 +12,7 @@ This project is a web api application based on .NET containing on docker, please
 if you have already installed docker desktop so with f5 is enough to run the application else continue reading please.
 
 ```bash
-docker compose up -d
+docker compose up --build
 ```
 
 please check the application :
