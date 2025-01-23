@@ -1,6 +1,6 @@
 services:
   products.database:
-     image: postgres:latest 
+     image: postgres 
      container_name: products.database
      environment:
         - POSTGRES_DB=CarDb
