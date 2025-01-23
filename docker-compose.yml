@@ -10,7 +10,7 @@ services:
      volumes:
         - ./.containers/products-db:/var/lib/postgresql/data 
      ports:
-        - 5423:5432 
+        - "5432:5432" 
       
   test_car.api:
     image: ${DOCKER_REGISTRY-}testcarapi
