@@ -12,9 +12,10 @@ This project is a web api application based on .NET containing on docker, please
 if you have already installed docker desktop so with f5 is enough to run the application else continue reading please.
 
 ```bash
-docker-compose up --build
+docker compose up -d
 ```
 
+please check the application :
 ```
-http://localhost:5001
+https://localhost:8081/swagger/index.html
 ```
